@@ -1,24 +1,35 @@
-# Ganit Capstone Project: Currency Exchange Rates
+# Ganit Capstone Project: Currency Exchange Rate Analysis
 
-## Overview
-This project fetches 1+ year of historical currency exchange data from Frankfurter API, stores it, performs EDA, and builds a Tableau dashboard. AWS is used for storage and processing.
+## Project Overview
+This project fetches 1-year historical currency exchange rates from the **Frankfurter API**, performs Exploratory Data Analysis (EDA), stores data using AWS S3, and visualizes insights using Tableau Public.
 
-## Project Structure
-- `scripts/`: Python scripts for data fetching and processing
-- `data/`: Stored CSV/SQLite data
-- `notebooks/`: Jupyter notebooks for EDA
-- `sql/`: SQL queries for analysis
-- `aws/`: Terraform or CloudFormation for AWS setup
-- `dashboard/`: Tableau workbook description and screenshots
+## Objectives Achieved
+- Fetched 1+ year of historical currency data
+- Stored data in structured format (CSV + SQLite)
+- Performed EDA using Python (Pandas, Matplotlib, Seaborn)
+- Uploaded data to AWS S3 (us-east-1)
+- Created interactive dashboard in Tableau Public
+- Derived actionable insights
 
-## Usage
-1. Set up AWS resources
-2. Run fetch script
-3. Perform EDA
-4. Build dashboard in Tableau
+## Technologies Used
+- **API**: Frankfurter API (ECB rates)
+- **Language**: Python
+- **Libraries**: pandas, matplotlib, seaborn, boto3
+- **Cloud**: AWS S3
+- **Visualization**: Tableau Public
+- **Storage**: CSV + SQLite
 
-## AWS Integration
-- Data stored in S3
-- Optional Lambda for scheduled fetches
-- Athena for querying
+## How to Run the Project
 
+```bash
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Fetch data
+python scripts/fetch_data.py
+
+# 3. Run EDA
+python notebooks/eda.py
+
+# 4. Upload to AWS S3
+python scripts/upload_to_s3.py
